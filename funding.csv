@@ -1,33 +1,35 @@
 funder,recipient,amount,date,source_url,notes
-John Pfeffer,MIT DCI,NA,2018,https://polylunar.com/bitcoin-grants-tracker/,
-BitMEX,MIT DCI,"250,000 USD",2019,https://blog.bitmex.com/donation/,
-DG Lab,BTCPay Server,"30,000 USD",2019,https://blog.btcpayserver.org/dg-grant-2019/,
-BitMEX,MIT DCI,"250,000 USD",2020,https://blog.bitmex.com/continued-support-of-bitcoin-development-hdr-provides-a-2nd-gift-to-the-mit-dci/,
-BTSE,BTCPay Server,"80,000 USD",2020,https://blog.btcpayserver.org/btcpay-server-btse/,
-CardCoins,Hennadii Stepanov,NA,2020,https://blog.cardcoins.co/cardcoins-and-bitcoin-core,
-Kraken,BTCPay Server,"150,000 USD",2020,https://bitcoinmagazine.com/business/kraken-announces-largest-ever-grant-to-btcpay,
-Kraken,Brink,"150,000 USD",2020,https://blog.kraken.com/post/6920/kraken-grants-150000-to-new-bitcoin-developer-center-brink,
-Spiral,Brink,"100,000 USD",2020,https://twitter.com/bitcoinbrink/status/1331212510679150594,
-Superlunar,Brink,"150,000 USD",2020,https://www.gemini.com/blog/gemini-opportunity-fund-launches-to-support-bitcoin-core-developers,
-Superlunar,HRF,"50,000 USD",2020,https://www.gemini.com/blog/gemini-opportunity-fund-launches-to-support-bitcoin-core-developers,
-BlockFi,Brink,"150,000 USD",2021,https://www.blockfi.com/blockfi-sponsors-brink-to-support-open-source-bitcoin-development,
-BtcTurk,Brink,"210,000 USD",2021,https://btcturk.medium.com/how-much-bitcoin-is-satoshi-nakamoto-holding-9270af64725f,
-CoinShares,MIT DCI,"500,000 USD",2021,https://coinshares.com/news/coinshares-contributes-to-mit-digital-currency-initiative-to-fund-independent-research-and-open-source-development,Grant period: 2021-2024
-Compass Mining,Jon Atack,"80,000 USD",2021,https://compassmining.io/education/compass-core-developer-donation/,
-FTX,Brink,"450,000 USD",2021,https://twitter.com/ftx_official/status/1426197748588679172,Grant period: 2021-2023
-Marathon Digital Holdings,Jonas Schnelli,"96,000 USD",2021,https://ir.marathondh.com/news-events/press-releases/detail/1225/marathon-patent-group-provides-one-year-grant-to,
-Nexo,Brink,"150,000 USD",2021,https://nexo.io/media-center/nexo-commits-to-supporting-open-source-bitcoin-development-with-150k-donation-to-brink,
-OKCoin,Brink,"100,000 USD",2021,https://blog.okcoin.com/2021/06/10/supporting-bitcoin-development-with-a-100k-brink-grant,
-Silvergate Bank,Brink,"50,000 USD",2021,https://twitter.com/bitcoinbrink/status/1381642699925774341,
-Stacks Foundation,Brink,"150,000 USD",2021,https://stacks.org/bitcoin-core-development,
-Superlunar,MIT DCI,"1,000,000 USD",2021,https://www.gemini.com/blog/gemini-opportunity-fund-donates-to-mits-digital-currency-initiative,Grant period: 2021-2024
-ChadCloutman,Brink,"50,000 USD",2022,https://twitter.com/bitcoinbrink/status/1533820838818025472,
-Coinbase,Brink,"300,000 USD",2022,https://twitter.com/bitcoinbrink/status/1486408169165410313,
-Craig Hammell,Brink,"1,000,000 USD",2022,https://twitter.com/bitcoinbrink/status/1519331178679046145,
-Exodus,Brink,"350,000 USD",2022,https://twitter.com/bitcoinbrink/status/1479104146137489414,
-Foundry,4ss0,1 BTC,2022,https://www.prnewswire.com/news-releases/foundry-makes-btc-donation-to-open-source-stratum-v2-protocol-developer-to-improve-bitcoins-proof-of-work-mining-layer-301598747.html,
-John Pfeffer,Vinteum,NA,2022,https://medium.com/vinteum-org/announcing-vinteum-supporting-bitcoin-development-in-brazil-bb74559ef164,
-OKCoin,Qala,NA,2022,https://blog.okcoin.com/meet-vinteum-and-qala-our-new-bitcoin-open-source-grant-recipients/,
-OKCoin,Vinteum,NA,2022,https://blog.okcoin.com/meet-vinteum-and-qala-our-new-bitcoin-open-source-grant-recipients/,
-Silvergate Bank,Brink,NA,2022,https://twitter.com/bitcoinbrink/status/1527718341737062400,Quarterly grant of $25k
-Superlunar,Qala,NA,2022,https://www.superlunar.com/post/africas-new-generation-of-bitcoin-developers,
+John Pfeffer,MIT DCI,NA,2018/01,http://web.archive.org/web/20221126163019/https://polylunar.com/bitcoin-grants-tracker/,
+BitMEX,MIT DCI,"250,000 USD",2019/05,https://blog.bitmex.com/donation/,
+DG Lab,BTCPay Server,"30,000 USD",2019/11,https://blog.btcpayserver.org/dg-grant-2019/,
+BitMEX,MIT DCI,"250,000 USD",2020/03,https://blog.bitmex.com/continued-support-of-bitcoin-development-hdr-provides-a-2nd-gift-to-the-mit-dci/,
+BTSE,BTCPay Server,"80,000 USD",2020/05,https://blog.btcpayserver.org/btcpay-server-btse/,
+CardCoins,Hennadii Stepanov,NA,2020/03,https://blog.cardcoins.co/cardcoins-and-bitcoin-core,
+Kraken,BTCPay Server,"150,000 USD",2020/06,https://bitcoinmagazine.com/business/kraken-announces-largest-ever-grant-to-btcpay,
+Kraken,Brink,"150,000 USD",2020/11,https://blog.kraken.com/post/6920/kraken-grants-150000-to-new-bitcoin-developer-center-brink,
+Spiral,Brink,"100,000 USD",2020/11,https://twitter.com/bitcoinbrink/status/1331212510679150594,
+Superlunar,Brink,"150,000 USD",2020/12,http://web.archive.org/web/20221122065633/https://www.gemini.com/blog/gemini-opportunity-fund-launches-to-support-bitcoin-core-developers,
+Superlunar,HRF,"50,000 USD",2020/12,http://web.archive.org/web/20221122065633/https://www.gemini.com/blog/gemini-opportunity-fund-launches-to-support-bitcoin-core-developers,
+BlockFi,Brink,"150,000 USD",2021/06,https://web.archive.org/web/20210702182803/https://www.blockfi.com/blockfi-sponsors-brink-to-support-open-source-bitcoin-development,
+BtcTurk,Brink,"210,000 USD",2021/03,https://btcturk.medium.com/how-much-bitcoin-is-satoshi-nakamoto-holding-9270af64725f,
+CoinShares,MIT DCI,"500,000 USD",2021/02,https://coinshares.com/news/coinshares-contributes-to-mit-digital-currency-initiative-to-fund-independent-research-and-open-source-development,over 4 years
+Compass Mining,Jon Atack,"80,000 USD",2021/08,https://compassmining.io/education/compass-core-developer-donation/,
+FTX,Brink,"450,000 USD",2021/08,https://twitter.com/ftx_official/status/1426197748588679172,over 3 years
+Marathon Digital Holdings,Jonas Schnelli,"96,000 USD",2021/01,https://ir.marathondh.com/news-events/press-releases/detail/1225/marathon-patent-group-provides-one-year-grant-to,
+Nexo,Brink,"150,000 USD",2021/03,https://nexo.io/media-center/nexo-commits-to-supporting-open-source-bitcoin-development-with-150k-donation-to-brink,
+OKCoin,Brink,"100,000 USD",2021/06,https://blog.okcoin.com/2021/06/10/supporting-bitcoin-development-with-a-100k-brink-grant,
+Silvergate Bank,Brink,"50,000 USD",2021/04,https://twitter.com/bitcoinbrink/status/1381642699925774341,
+Stacks Foundation,Brink,"150,000 USD",2021/10,https://stacks.org/bitcoin-core-development,
+Superlunar,MIT DCI,"1,000,000 USD",2021/02,https://www.gemini.com/blog/gemini-opportunity-fund-donates-to-mits-digital-currency-initiative,over 4 years
+ChadCloutman,Brink,"50,000 USD",2022/06,https://twitter.com/bitcoinbrink/status/1533820838818025472,
+Coinbase,Brink,"300,000 USD",2022/01,https://twitter.com/bitcoinbrink/status/1486408169165410313,
+Craig Hammell,Brink,"1,000,000 USD",2022/04,https://twitter.com/bitcoinbrink/status/1519331178679046145,
+Exodus,Brink,"350,000 USD",2022/01,https://twitter.com/bitcoinbrink/status/1479104146137489414,
+Foundry,4ss0,1 BTC,2022/08,https://www.prnewswire.com/news-releases/foundry-makes-btc-donation-to-open-source-stratum-v2-protocol-developer-to-improve-bitcoins-proof-of-work-mining-layer-301598747.html,
+John Pfeffer,Vinteum,NA,2022/08,https://medium.com/vinteum-org/announcing-vinteum-supporting-bitcoin-development-in-brazil-bb74559ef164,founding sponsor
+Wences Casares,Vinteum,NA,2022/08,https://medium.com/vinteum-org/announcing-vinteum-supporting-bitcoin-development-in-brazil-bb74559ef164,founding sponsor
+Sebastián Serrano,Vinteum,NA,2022/08,https://medium.com/vinteum-org/announcing-vinteum-supporting-bitcoin-development-in-brazil-bb74559ef164,founding sponsor
+OKCoin,Vinteum,NA,2022/10,https://web.archive.org/web/20221012213003/https://blog.okcoin.com/meet-vinteum-and-qala-our-new-bitcoin-open-source-grant-recipients/,
+OKCoin,Qala,NA,2022/10,https://web.archive.org/web/20221012213003/https://blog.okcoin.com/meet-vinteum-and-qala-our-new-bitcoin-open-source-grant-recipients/,
+Silvergate Bank,Brink,NA,2022/05,https://twitter.com/bitcoinbrink/status/1527718341737062400,$25k quarterly donation
+Superlunar,Qala,NA,2022/06,https://www.superlunar.com/post/africas-new-generation-of-bitcoin-developers,
