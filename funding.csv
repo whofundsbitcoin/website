@@ -6,8 +6,8 @@ BitMEX,MIT DCI,"250,000 USD",2020/03,https://blog.bitmex.com/continued-support-o
 BTSE,BTCPay Server,"80,000 USD",2020/05,https://blog.btcpayserver.org/btcpay-server-btse/,
 CardCoins,Hennadii Stepanov,NA,2020/03,https://blog.cardcoins.co/cardcoins-and-bitcoin-core,
 Kraken,BTCPay Server,"150,000 USD",2020/06,https://bitcoinmagazine.com/business/kraken-announces-largest-ever-grant-to-btcpay,
-John Pfeffer,Brink,NA,2020/11,https://brink.dev/blog/2020/11/24/on-the-brink/, founding sponsor
-Wences Casares,Brink,NA,2020/11,https://brink.dev/blog/2020/11/24/on-the-brink/, founding sponsor
+John Pfeffer,Brink,NA,2020/11,https://brink.dev/blog/2020/11/24/on-the-brink/,founding donor
+Wences Casares,Brink,NA,2020/11,https://brink.dev/blog/2020/11/24/on-the-brink/,founding donor
 Kraken,Brink,"150,000 USD",2020/11,https://blog.kraken.com/post/6920/kraken-grants-150000-to-new-bitcoin-developer-center-brink,
 Spiral,Brink,"100,000 USD",2020/11,https://twitter.com/bitcoinbrink/status/1331212510679150594,
 Superlunar,Brink,"150,000 USD",2020/12,http://web.archive.org/web/20221122065633/https://www.gemini.com/blog/gemini-opportunity-fund-launches-to-support-bitcoin-core-developers,
@@ -31,9 +31,9 @@ Coinbase,Brink,"300,000 USD",2022/01,https://twitter.com/bitcoinbrink/status/148
 Craig Hammell,Brink,"1,000,000 USD",2022/04,https://twitter.com/bitcoinbrink/status/1519331178679046145,
 Exodus,Brink,"350,000 USD",2022/01,https://twitter.com/bitcoinbrink/status/1479104146137489414,
 Foundry,4ss0,1 BTC,2022/08,https://www.prnewswire.com/news-releases/foundry-makes-btc-donation-to-open-source-stratum-v2-protocol-developer-to-improve-bitcoins-proof-of-work-mining-layer-301598747.html,
-John Pfeffer,Vinteum,NA,2022/08,https://medium.com/vinteum-org/announcing-vinteum-supporting-bitcoin-development-in-brazil-bb74559ef164,founding sponsor
-Wences Casares,Vinteum,NA,2022/08,https://medium.com/vinteum-org/announcing-vinteum-supporting-bitcoin-development-in-brazil-bb74559ef164,founding sponsor
-Sebastián Serrano,Vinteum,NA,2022/08,https://medium.com/vinteum-org/announcing-vinteum-supporting-bitcoin-development-in-brazil-bb74559ef164,founding sponsor
+John Pfeffer,Vinteum,NA,2022/08,https://medium.com/vinteum-org/announcing-vinteum-supporting-bitcoin-development-in-brazil-bb74559ef164,founding donor
+Wences Casares,Vinteum,NA,2022/08,https://medium.com/vinteum-org/announcing-vinteum-supporting-bitcoin-development-in-brazil-bb74559ef164,founding donor
+Sebastián Serrano,Vinteum,NA,2022/08,https://medium.com/vinteum-org/announcing-vinteum-supporting-bitcoin-development-in-brazil-bb74559ef164,founding donor
 OKCoin,Vinteum,NA,2022/10,https://web.archive.org/web/20221012213003/https://blog.okcoin.com/meet-vinteum-and-qala-our-new-bitcoin-open-source-grant-recipients/,
 OKCoin,Qala,NA,2022/10,https://web.archive.org/web/20221012213003/https://blog.okcoin.com/meet-vinteum-and-qala-our-new-bitcoin-open-source-grant-recipients/,
 Silvergate Bank,Brink,NA,2022/05,https://twitter.com/bitcoinbrink/status/1527718341737062400,$25k quarterly donation
@@ -56,4 +56,6 @@ Jack Dorsey,OpenSats,"15,000,000 USD",2023/05,https://opensats.org/blog/opensats
 Core Scientific,Brink,"68,164 USD",2024/10,https://github.com/bitcoinbrink/website/pull/138/commits/a9831b66937c1f594dd87bbfea671de65bdf3ccd,through Foundry Donate
 Xapo Bitcoin Trust,Brink,"1,400,000 USD",2024/10,https://github.com/bitcoinbrink/website/pull/138/commits/a9831b66937c1f594dd87bbfea671de65bdf3ccd,over 4 years
 On behalf of Paxos,Brink,"250,000 USD",2024/10,https://github.com/bitcoinbrink/website/pull/138/commits/a9831b66937c1f594dd87bbfea671de65bdf3ccd,
+Mark Casey,Localhost Research,NA,2024/10,https://lclhost.org/blog/getting-started/,founding donor
+Wences Casares,Localhost Research,NA,2024/10,https://lclhost.org/blog/getting-started/,founding donor
 Nexo,Brink,1 BTC,2024/12,https://x.com/Nexo/status/1869446013016310271,
