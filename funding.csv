@@ -13,10 +13,11 @@ Spiral,Brink,"100,000 USD",2020/11,https://twitter.com/bitcoinbrink/status/13312
 Superlunar,Brink,"150,000 USD",2020/12,http://web.archive.org/web/20221122065633/https://www.gemini.com/blog/gemini-opportunity-fund-launches-to-support-bitcoin-core-developers,
 Superlunar,HRF,"50,000 USD",2020/12,http://web.archive.org/web/20221122065633/https://www.gemini.com/blog/gemini-opportunity-fund-launches-to-support-bitcoin-core-developers,
 Jack Dorsey & Jay-Z,BTrust,"500 BTC",2021/02,https://x.com/jack/status/1360114881978982403
-BlockFi,Brink,"150,000 USD",2021/06,https://web.archive.org/web/20210702182803/https://www.blockfi.com/blockfi-sponsors-brink-to-support-open-source-bitcoin-development,
 Jack Dorsey,Brink,1 BTC,2021/02,https://x.com/bitcoinbrink/status/1364250436669161474,
 BtcTurk,Brink,"210,000 USD",2021/03,https://btcturk.medium.com/how-much-bitcoin-is-satoshi-nakamoto-holding-9270af64725f,
-CoinShares,MIT DCI,"500,000 USD",2021/02,https://coinshares.com/news/coinshares-contributes-to-mit-digital-currency-initiative-to-fund-independent-research-and-open-source-development,over 4 years
+CoinShares,MIT DCI,"500,000 USD",2021/02,http://web.archive.org/web/20210625124550/https://coinshares.com/news/coinshares-contributes-to-mit-digital-currency-initiative-to-fund-independent-research-and-open-source-development/,over 4 years
+Peter McCormack,Brink,"10.000 USD",2021/05,https://x.com/PeterMcCormack/status/1366727874670194695
+BlockFi,Brink,"150,000 USD",2021/06,https://web.archive.org/web/20210702182803/https://www.blockfi.com/blockfi-sponsors-brink-to-support-open-source-bitcoin-development,
 Compass Mining,Jon Atack,"80,000 USD",2021/08,https://compassmining.io/education/compass-core-developer-donation/,
 FTX,Brink,"450,000 USD",2021/08,https://twitter.com/ftx_official/status/1426197748588679172,over 3 years
 CMS Holdings,Brink,"200,000 USD",2021/09,https://github.com/bitcoinbrink/website/pull/59/commits/6790334c5e9d09544aa0ea897a8902a16ccae0c9,
@@ -26,10 +27,11 @@ OKCoin,Brink,"100,000 USD",2021/06,https://blog.okcoin.com/2021/06/10/supporting
 Silvergate Bank,Brink,"50,000 USD",2021/04,https://twitter.com/bitcoinbrink/status/1381642699925774341,
 Stacks Foundation,Brink,"150,000 USD",2021/10,https://stacks.org/bitcoin-core-development,
 Superlunar,MIT DCI,"1,000,000 USD",2021/02,https://www.gemini.com/blog/gemini-opportunity-fund-donates-to-mits-digital-currency-initiative,over 4 years
-ChadCloutman,Brink,"50,000 USD",2022/06,https://twitter.com/bitcoinbrink/status/1533820838818025472,
+TABConf,Brink,"5,000 USD",2022/01,https://x.com/bitcoinbrink/status/1478389878215872513
 Coinbase,Brink,"300,000 USD",2022/01,https://twitter.com/bitcoinbrink/status/1486408169165410313,
 Craig Hammell,Brink,"1,000,000 USD",2022/04,https://twitter.com/bitcoinbrink/status/1519331178679046145,
 Exodus,Brink,"350,000 USD",2022/01,https://twitter.com/bitcoinbrink/status/1479104146137489414,
+ChadCloutman,Brink,"50,000 USD",2022/06,https://twitter.com/bitcoinbrink/status/1533820838818025472,
 Foundry,4ss0,1 BTC,2022/08,https://www.prnewswire.com/news-releases/foundry-makes-btc-donation-to-open-source-stratum-v2-protocol-developer-to-improve-bitcoins-proof-of-work-mining-layer-301598747.html,
 John Pfeffer,Vinteum,NA,2022/08,https://medium.com/vinteum-org/announcing-vinteum-supporting-bitcoin-development-in-brazil-bb74559ef164,founding donor
 Wences Casares,Vinteum,NA,2022/08,https://medium.com/vinteum-org/announcing-vinteum-supporting-bitcoin-development-in-brazil-bb74559ef164,founding donor
@@ -42,18 +44,28 @@ Lightspark,Brink,"150,000 USD",2023/02,https://x.com/bitcoinbrink/status/1625926
 The Draper Foundation,Brink,"100,000 USD",2023/03,https://x.com/bitcoinbrink/status/1636394893605064704,
 Samara Asset Group,Brink,"450,000 USD",2023/04,https://x.com/bitcoinbrink/status/1651975293232631808,over 3 years
 Balaji Srinivasan,Chaincode Labs,"16.55 BTC",2023/05,https://x.com/balajis/status/1653451860488130565,equivalent to $500k
-Jack Dorsey,OpenSats,"4,670,000 USD",2023/05,https://opensats.org/blog/opensats-receives-additional-funding-of-dollar10m-from-startsmall,$5M for the Nostr Fund and $330k for the Operations Budget
+Jack Dorsey,OpenSats,"4,670,000 USD",2023/05,https://opensats.org/blog/opensats-receives-additional-funding-of-dollar10m-from-startsmall,also $5M for the Nostr Fund and $330k for the Operations Budget
 Marathon Digital Holdings,Brink,"500,000 USD",2023/05,https://x.com/bitcoinbrink/status/1659304041137020933,
 BitMEX,Brink,"50,000 USD",2023/05,https://blog.bitmex.com/brink-sponsorship/,
 Stakwork,Brink,"180,000 USD",2023/06,https://x.com/bitcoinbrink/status/1666144367902326790,over 3 years
 Jack Dorsey,Brink,"5,000,000 USD",2023/06,https://x.com/bitcoinbrink/status/1669012369727537152,over 5 years
+David Harding,Brink,"5,217 USD",2023/11,https://dtrt.org/posts/mb3e-announcement/#on-the-brink,royalties from Mastering Bitcoin 3rd edition
 The Draper Foundation,Brink,"150,000 USD",2023/12,https://x.com/bitcoinbrink/status/1738248645940556257,
+Bitwise,Brink,"%",2024/01,https://bitbetf.com/funding-bitcoin,part of a 10% Bitcoin ETF profits pledge
+Bitwise,OpenSats,"%",2024/01,https://bitbetf.com/funding-bitcoin,part of a 10% Bitcoin ETF profits pledge
+Bitwise,HRF,"%",2024/01,https://bitbetf.com/funding-bitcoin,part of a 10% Bitcoin ETF profits pledge
+VanEck,Brink,"%",2024/01,https://x.com/vaneck_us/status/1743300722928619779,5% of Bitcoin ETF profits
 Coinbase,Brink,"3,600,000 USD",2024/02,https://x.com/bitcoinbrink/status/1758544229721120870,
 OKCoin,Brink,"150,000 USD",2024/02,https://github.com/bitcoinbrink/website/pull/124/commits/ac50ff407fd9cbab56b712cec9d9c33d13a981db,
 River Financial,Brink,"50,000 USD",2024/02,https://x.com/River/status/1760313404537934195,
 Reynolds Foundation,OpenSats,"1,000,000 USD",2024/04,https://opensats.org/blog/opensats-receives-one-million-from-reynolds-foundation
+Jack Dorsey,OpenSats,"15,000,000 USD",2024/05,https://opensats.org/blog/opensats-receives-additional-funding-of-dollar21m-from-startsmall,also $5M for the Nostr Fund and $1M for the Operations Budget
+Ledger,Brink,"90,000 USD",2024/06,https://x.com/bitcoinbrink/status/1850861824318615666,$5 per BTC Orange device sold
+Build Asset Management,OpenSats,"%",2024/08,https://opensats.org/blog/donation-commitment-from-build-asset-management,10% of management fees from their bitcoin-backed fund
+ARK Invest,Brink,"%",2024/08,https://njump.me/nevent1qqsqn2s0vekw45jxahy3llcg2k3jxf804kkjma45508w6g8gnht2g4cprpmhxue69uhhyetvv9ujumn0wdmksetjv5hxxmmdqyt8wumn8ghj7un9d3shjtnwdaehgu3wvfskueqpz3mhxue69uhhyetvv9ujuerpd46hxtnfdupzqpxfzhdwlm3cx9l6wdzyft8w8y9gy607tqgtyfq7tekaxs7lhmxfspda99,part of a fixed % revenue pledge
+ARK Invest,OpenSats,"%",2024/08,https://njump.me/nevent1qqsqn2s0vekw45jxahy3llcg2k3jxf804kkjma45508w6g8gnht2g4cprpmhxue69uhhyetvv9ujumn0wdmksetjv5hxxmmdqyt8wumn8ghj7un9d3shjtnwdaehgu3wvfskueqpz3mhxue69uhhyetvv9ujuerpd46hxtnfdupzqpxfzhdwlm3cx9l6wdzyft8w8y9gy607tqgtyfq7tekaxs7lhmxfspda99,part of a fixed % revenue pledge
+ARK Invest,HRF,"%",2024/08,https://njump.me/nevent1qqsqn2s0vekw45jxahy3llcg2k3jxf804kkjma45508w6g8gnht2g4cprpmhxue69uhhyetvv9ujumn0wdmksetjv5hxxmmdqyt8wumn8ghj7un9d3shjtnwdaehgu3wvfskueqpz3mhxue69uhhyetvv9ujuerpd46hxtnfdupzqpxfzhdwlm3cx9l6wdzyft8w8y9gy607tqgtyfq7tekaxs7lhmxfspda99,part of a fixed % revenue pledge
 The Draper Foundation,Brink,"250,000 USD",2024/10,https://x.com/bitcoinbrink/status/1848395071353458701,
-Jack Dorsey,OpenSats,"15,000,000 USD",2023/05,https://opensats.org/blog/opensats-receives-additional-funding-of-dollar21m-from-startsmall,allso $5M for the Nostr Fund and $1M for the Operations Budget
 Core Scientific,Brink,"68,164 USD",2024/10,https://github.com/bitcoinbrink/website/pull/138/commits/a9831b66937c1f594dd87bbfea671de65bdf3ccd,through Foundry Donate
 Xapo Bitcoin Trust,Brink,"1,400,000 USD",2024/10,https://github.com/bitcoinbrink/website/pull/138/commits/a9831b66937c1f594dd87bbfea671de65bdf3ccd,over 4 years
 On behalf of Paxos,Brink,"250,000 USD",2024/10,https://github.com/bitcoinbrink/website/pull/138/commits/a9831b66937c1f594dd87bbfea671de65bdf3ccd,
