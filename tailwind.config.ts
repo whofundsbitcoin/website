@@ -1,0 +1,70 @@
+import type { Config } from "tailwindcss";
+
+export default {
+  darkMode: ["class"],
+  content: [
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        orange: {
+          DEFAULT: "#f1760f",
+          "50": "#fff8eb",
+          "100": "#fde9c8",
+          "200": "#fbd28c",
+          "300": "#f9b450",
+          "400": "#f7931a",
+          "500": "#f1760f",
+          "600": "#e56c0d",
+          "700": "#d9630b",
+          "800": "#cc5a0a",
+          "900": "#bf5109",
+          "950": "#b24808",
+        },
+        gray: {
+          DEFAULT: "#696a71",
+          "50": "#f5f5f6",
+          "100": "#e5e5e8",
+          "200": "#cfd0d2",
+          "300": "#adaeb3",
+          "400": "#84858c",
+          "500": "#696a71",
+          "600": "#595961",
+          "700": "#4c4d52",
+          "800": "#434347",
+          "900": "#3b3b3e",
+          "950": "#1c1c1e",
+        },
+        black: {
+          DEFAULT: "#1c1c1e",
+          "50": "#f5f5f6",
+          "100": "#e5e5e8",
+          "200": "#cfd0d2",
+          "300": "#adaeb3",
+          "400": "#84858c",
+          "500": "#696a71",
+          "600": "#595961",
+          "700": "#4c4d52",
+          "800": "#434347",
+          "900": "#3b3b3e",
+          "950": "#1c1c1e",
+        },
+        background: "var(--background)",
+        foreground: "var(--foreground)",
+      },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+      },
+      fontFamily: {
+        brawler: ["var(--brawler-font)"],
+        sans: ["var(--barlow-font)", "sans-serif"],
+      },
+    },
+  },
+  plugins: [require("tailwindcss-animate")],
+} satisfies Config;
