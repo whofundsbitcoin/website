@@ -10,8 +10,17 @@ interface FundingEntry {
   notes: string | null;
 }
 
+interface AggregateEntry {
+  funder: string;
+  recipientCount: number;
+  amount: string;
+  source_url: string;
+  notes: string;
+}
+
 interface FundingStatsProps {
   data: FundingEntry[];
+  aggregateData: AggregateEntry[];
   searchQuery?: string;
   selectedFunder: string;
   selectedRecipient: string;
@@ -20,29 +29,97 @@ interface FundingStatsProps {
 
 const FundingStats: React.FC<FundingStatsProps> = ({
   data,
+  aggregateData,
   searchQuery = "",
   selectedFunder = "all",
   selectedRecipient = "all",
   selectedYear = "all",
 }) => {
+  // Check if any filters are active
+  const hasActiveFilters = useMemo(() => {
+    return (
+      searchQuery !== "" ||
+      selectedFunder !== "all" ||
+      selectedRecipient !== "all" ||
+      selectedYear !== "all"
+    );
+  }, [searchQuery, selectedFunder, selectedRecipient, selectedYear]);
+
   // Process data and calculate totals
-  const { uniqueFunders, uniqueRecipients, yearRange } = useMemo(() => {
-    const funders = new Set(data.map((d) => d.funder));
-    const recipients = new Set(data.map((d) => d.recipient));
+  const { uniqueFunders, uniqueRecipients, yearRange, formattedTotals } =
+    useMemo(() => {
+      // For individual donations
+      const funders = new Set(data.map((d) => d.funder));
+      const recipients = new Set(data.map((d) => d.recipient));
 
-    // Calculate year range
-    const years = data
-      .map((d) => parseInt(d.date.split("/")[0]))
-      .filter(Boolean);
-    const minYear = Math.min(...years);
-    const maxYear = Math.max(...years);
+      // Calculate year range from individual donations
+      const years = data
+        .map((d) => parseInt(d.date.split("/")[0]))
+        .filter(Boolean);
+      const minYear = Math.min(...years);
+      const maxYear = Math.max(...years);
 
-    return {
-      uniqueFunders: funders.size,
-      uniqueRecipients: recipients.size,
-      yearRange: { minYear, maxYear },
-    };
-  }, [data]);
+      // Calculate totals including both individual and aggregate data
+      let totalUSD = 0;
+      let totalBTC = 0;
+
+      // Process individual donations
+      data.forEach((entry) => {
+        if (!entry.amount || entry.amount === "NA") return;
+        const amountStr = entry.amount.replace(/,/g, "");
+        const match = amountStr.match(/^(\d+(?:\.\d+)?)\s*(BTC|USD)?$/);
+
+        if (match) {
+          const [, value, currency] = match;
+          const numValue = parseFloat(value);
+
+          if (currency === "BTC") {
+            totalBTC += numValue;
+          } else {
+            totalUSD += numValue;
+          }
+        }
+      });
+
+      // Add aggregate data if no filters are active
+      if (!hasActiveFilters) {
+        // Add unique funders and their recipient counts from aggregates
+        aggregateData.forEach((agg) => {
+          funders.add(agg.funder);
+
+          // Process aggregate amounts
+          const amountStr = agg.amount.replace(/,/g, "");
+          const match = amountStr.match(/^(\d+(?:\.\d+)?)\s*(BTC|USD)?$/);
+
+          if (match) {
+            const [, value, currency] = match;
+            const numValue = parseFloat(value);
+
+            if (currency === "BTC") {
+              totalBTC += numValue;
+            } else {
+              totalUSD += numValue;
+            }
+          }
+        });
+
+        // Add recipient counts from aggregates
+        const additionalRecipients = aggregateData.reduce(
+          (sum, agg) => sum + agg.recipientCount,
+          0
+        );
+        for (let i = 0; i < additionalRecipients; i++) {
+          recipients.add(`aggregate_recipient_${i}`);
+        }
+      }
+
+      return {
+        uniqueFunders: funders.size,
+        uniqueRecipients: recipients.size,
+        yearRange: { minYear, maxYear },
+        formattedTotals: formatCurrencies(totalUSD, totalBTC),
+      };
+    }, [data, aggregateData, hasActiveFilters]);
 
   // Generate dynamic subtitle based on filters
   const subtitle = useMemo(() => {
@@ -79,6 +156,10 @@ const FundingStats: React.FC<FundingStatsProps> = ({
       }
     }
 
+    if (hasActiveFilters) {
+      parts.push("(excluding aggregate donations)");
+    }
+
     return parts.join(" ");
   }, [
     selectedFunder,
@@ -87,35 +168,8 @@ const FundingStats: React.FC<FundingStatsProps> = ({
     uniqueFunders,
     uniqueRecipients,
     yearRange,
+    hasActiveFilters,
   ]);
-
-  const { formattedTotals } = useMemo(() => {
-    let totalUSD = 0;
-    let totalBTC = 0;
-
-    data.forEach((entry) => {
-      if (!entry.amount || entry.amount === "NA") return;
-
-      // Parse amount string and split into value and currency
-      const amountStr = entry.amount.replace(/,/g, "");
-      const match = amountStr.match(/^(\d+(?:\.\d+)?)\s*(BTC|USD)?$/);
-
-      if (match) {
-        const [, value, currency] = match;
-        const numValue = parseFloat(value);
-
-        if (currency === "BTC") {
-          totalBTC += numValue;
-        } else {
-          totalUSD += numValue;
-        }
-      }
-    });
-
-    return {
-      formattedTotals: formatCurrencies(totalUSD, totalBTC),
-    };
-  }, [data]);
 
   return (
     <div className="w-full max-w-2xl mx-auto px-10">

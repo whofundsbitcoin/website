@@ -7,6 +7,9 @@ import FundingStats from "@/components/funding/FundingStats";
 import FilterSelects from "@/components/funding/FilterSelects";
 import FundingTable from "@/components/funding/FundingTable";
 import { ThemeToggle } from "../ThemeToggle";
+import FundingAggregatesTable, {
+  aggregatesData,
+} from "./FundingAggregatesTable";
 
 export interface FundingEntry {
   funder: string;
@@ -31,6 +34,15 @@ export default function FundingPage() {
   const [selectedRecipient, setSelectedRecipient] = useState<string>("all");
   const [selectedYear, setSelectedYear] = useState<string>("all");
   const [sortDirection, setSortDirection] = useState<"desc" | "asc">("desc");
+  // Check if any filters are active
+  const hasActiveFilters = useMemo(() => {
+    return (
+      searchQuery !== "" ||
+      selectedFunder !== "all" ||
+      selectedRecipient !== "all" ||
+      selectedYear !== "all"
+    );
+  }, [searchQuery, selectedFunder, selectedRecipient, selectedYear]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -138,6 +150,7 @@ export default function FundingPage() {
               {!isLoading && !error && (
                 <FundingStats
                   data={filteredData}
+                  aggregateData={aggregatesData}
                   searchQuery={searchQuery}
                   selectedFunder={selectedFunder}
                   selectedRecipient={selectedRecipient}
@@ -160,7 +173,7 @@ export default function FundingPage() {
         </div>
 
         {/* Table Section */}
-        <div className="px-4 md:px-14 py-16 bg-white dark:bg-black">
+        <div className="px-4 md:px-14 pb-16 bg-white dark:bg-black">
           {isLoading ? (
             <div className="flex items-center justify-center min-h-[400px]">
               <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-orange-500"></div>
@@ -170,7 +183,22 @@ export default function FundingPage() {
               {error}
             </div>
           ) : (
-            <div className="max-w-7xl mx-auto space-y-8">
+            <div className="max-w-7xl mx-auto space-y-12">
+              {/* Aggregated Donations Section */}
+              <div
+                className={`space-y-4 transition-opacity duration-500 ease-in-out ${
+                  hasActiveFilters
+                    ? "opacity-0 h-0 overflow-hidden my-0"
+                    : "opacity-100 h-auto my-8"
+                }`}
+              >
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+                  Aggregated Donations
+                </h2>
+                <FundingAggregatesTable data={aggregatesData} />
+              </div>
+
+              {/* Individual Donations Section */}
               <div className="space-y-4">
                 <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
                   {/* Search Input */}
@@ -208,23 +236,22 @@ export default function FundingPage() {
                   sortDirection={sortDirection}
                   setSortDirection={setSortDirection}
                 />
+              </div>
 
-                <div className="flex flex-col md:flex-row md:justify-between items-start gap-4 text-sm text-gray-500 dark:text-gray-400">
-                  <div>
-                    Showing {filteredData.length} of {fundingData.length}{" "}
-                    entries
-                  </div>
-                  <div className="flex items-center gap-1">
-                    Contribute your data on{" "}
-                    <a
-                      href="https://github.com/bitcoin-dev-project/who-funds-bitcoin-development"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-orange-500 hover:text-orange-600 inline-flex items-center gap-1"
-                    >
-                      GitHub <ExternalLink className="h-3 w-3" />
-                    </a>
-                  </div>
+              <div className="flex flex-col md:flex-row md:justify-between items-start gap-4 text-sm text-gray-500 dark:text-gray-400">
+                <div>
+                  Showing {filteredData.length} of {fundingData.length} entries
+                </div>
+                <div className="flex items-center gap-1">
+                  Contribute your data on{" "}
+                  <a
+                    href="https://github.com/bitcoin-dev-project/who-funds-bitcoin-development"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-orange-500 hover:text-orange-600 inline-flex items-center gap-1"
+                  >
+                    GitHub <ExternalLink className="h-3 w-3" />
+                  </a>
                 </div>
               </div>
             </div>
