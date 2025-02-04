@@ -118,20 +118,20 @@ const FundingStats: React.FC<FundingStatsProps> = ({
   }, [data]);
 
   return (
-    <div className="space-y-4">
-      <div className="grid gap-4 md:grid-cols-2">
-        <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">
-              Total Public Donations
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold">{formattedTotals}</div>
-            <p className="text-sm text-muted-foreground mt-1">{subtitle}</p>
-          </CardContent>
-        </Card>
-      </div>
+    <div className="w-full max-w-2xl mx-auto px-10">
+      <Card className="bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm border-2 border-orange-100 dark:border-gray-800 shadow-xl">
+        <CardHeader className="flex flex-col items-center pb-2">
+          <CardTitle className="text-lg font-medium text-gray-900 dark:text-gray-100">
+            Total Public Donations
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="text-center pt-0">
+          <div className="text-4xl font-bold text-orange-500 dark:text-orange-400 mb-2">
+            {formattedTotals}
+          </div>
+          <p className="text-sm text-gray-600 dark:text-gray-300">{subtitle}</p>
+        </CardContent>
+      </Card>
     </div>
   );
 };

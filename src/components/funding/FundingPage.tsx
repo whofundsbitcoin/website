@@ -113,93 +113,123 @@ export default function FundingPage() {
 
   return (
     <div className="min-h-screen bg-white dark:bg-black">
-      <div className="flex justify-end p-4 border-b border-gray-200 dark:border-gray-800">
+      {/* Header with theme toggle */}
+      <div className="absolute top-0 right-0 p-4">
         <ThemeToggle />
       </div>
-      <div className="flex flex-col p-14 max-sm:p-7 mx-auto my-0 max-w-7xl">
-        <div className="flex flex-col mb-12 gap-y-10 w-2/3 max-md:w-full self-center">
-          <h1 className="text-[58px] max-lg:text-[36px] max-md:text-center font-bold leading-tight">
-            Who Funds Bitcoin Development?
-          </h1>
-          <p className="text-xl max-md:text-lg">
-            Publicly disclosed bitcoin development funding, excluding downstream
-            allocations
-          </p>
-        </div>
 
-        {isLoading ? (
-          <div className="flex items-center justify-center min-h-[400px]">
-            <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-orange-500"></div>
-          </div>
-        ) : error ? (
-          <div className="flex items-center justify-center min-h-[400px] text-red-500">
-            {error}
-          </div>
-        ) : (
-          <div className="space-y-8">
-            <FundingStats
-              data={filteredData}
-              searchQuery={searchQuery}
-              selectedFunder={selectedFunder}
-              selectedRecipient={selectedRecipient}
-              selectedYear={selectedYear}
-            />
-            <div className="space-y-4">
-              <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-                {/* Search Input */}
-                <div className="relative w-full md:w-64">
-                  <Search className="absolute left-2 top-2.5 h-4 w-4 text-gray-500" />
-                  <input
-                    type="text"
-                    placeholder="Search..."
-                    className="pl-8 w-full rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 text-sm"
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                  />
-                </div>
+      {/* Hero Section - Above the fold */}
+      <div className="min-h-screen flex flex-col">
+        <div className="flex-1 flex flex-col justify-center items-center px-4 py-16 bg-gradient-to-b from-orange-50 to-white dark:from-gray-900 dark:to-black">
+          <div className="max-w-5xl w-full mx-auto text-center space-y-8">
+            {/* Title */}
+            <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight text-gray-900 dark:text-white">
+              <span>WHO FUNDS BITCOIN</span>{" "}
+              <span className="max-[480px]:text-5xl">DEVELOPMENT?</span>
+            </h1>
+            {/* Tagline */}
+            <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              Publicly disclosed bitcoin development funding, excluding
+              downstream allocations
+            </p>
 
-                {/* Filter Selects */}
-                <FilterSelects
-                  rawData={fundingData}
-                  filteredData={filteredData}
+            {/* Stats Card */}
+            <div className="mt-12 mb-8">
+              {!isLoading && !error && (
+                <FundingStats
+                  data={filteredData}
+                  searchQuery={searchQuery}
                   selectedFunder={selectedFunder}
                   selectedRecipient={selectedRecipient}
                   selectedYear={selectedYear}
-                  onFunderChange={setSelectedFunder}
-                  onRecipientChange={setSelectedRecipient}
-                  onYearChange={setSelectedYear}
-                  onReset={() => {
-                    setSelectedFunder("all");
-                    setSelectedRecipient("all");
-                    setSelectedYear("all");
-                  }}
                 />
-              </div>
+              )}
+            </div>
 
-              <FundingTable
-                data={filteredData}
-                sortDirection={sortDirection}
-                setSortDirection={setSortDirection}
-              />
-
-              <div className="flex flex-row-reverse text-sm text-gray-500 dark:text-gray-400">
-                Showing {filteredData.length} of {fundingData.length} entries
-              </div>
-              <div className="flex items-center gap-1">
-                Contribute your data to{" "}
-                <a
-                  href="https://github.com/bitcoin-dev-project/who-funds-bitcoin-development"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-orange-500 hover:text-orange-600 inline-flex items-center gap-1"
-                >
-                  /who-funds-bitcoin-development{" "}
-                  <ExternalLink className="h-3 w-3" />
-                </a>
-              </div>
+            {/* Additional Information */}
+            <div className="prose prose-lg dark:prose-invert mx-auto max-w-3xl">
+              <p className="text-gray-600 dark:text-gray-300">
+                Bitcoin is open-source and decentralized. No single entity
+                should control it. But equally, no single entity is responsible
+                for improving it. It is easy for Bitcoin users and companies to
+                free-ride without contributing to Bitcoin development — a
+                classic tragedy of the commons.
+              </p>
             </div>
           </div>
-        )}
+        </div>
+
+        {/* Table Section */}
+        <div className="px-4 md:px-14 py-16 bg-white dark:bg-black">
+          {isLoading ? (
+            <div className="flex items-center justify-center min-h-[400px]">
+              <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-orange-500"></div>
+            </div>
+          ) : error ? (
+            <div className="flex items-center justify-center min-h-[400px] text-red-500">
+              {error}
+            </div>
+          ) : (
+            <div className="max-w-7xl mx-auto space-y-8">
+              <div className="space-y-4">
+                <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+                  {/* Search Input */}
+                  <div className="relative w-full md:w-64">
+                    <Search className="absolute left-2 top-2.5 h-4 w-4 text-gray-500" />
+                    <input
+                      type="text"
+                      placeholder="Search..."
+                      className="pl-8 w-full rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 text-sm"
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                    />
+                  </div>
+
+                  {/* Filter Selects */}
+                  <FilterSelects
+                    rawData={fundingData}
+                    filteredData={filteredData}
+                    selectedFunder={selectedFunder}
+                    selectedRecipient={selectedRecipient}
+                    selectedYear={selectedYear}
+                    onFunderChange={setSelectedFunder}
+                    onRecipientChange={setSelectedRecipient}
+                    onYearChange={setSelectedYear}
+                    onReset={() => {
+                      setSelectedFunder("all");
+                      setSelectedRecipient("all");
+                      setSelectedYear("all");
+                    }}
+                  />
+                </div>
+
+                <FundingTable
+                  data={filteredData}
+                  sortDirection={sortDirection}
+                  setSortDirection={setSortDirection}
+                />
+
+                <div className="flex flex-col md:flex-row md:justify-between items-start gap-4 text-sm text-gray-500 dark:text-gray-400">
+                  <div>
+                    Showing {filteredData.length} of {fundingData.length}{" "}
+                    entries
+                  </div>
+                  <div className="flex items-center gap-1">
+                    Contribute your data on{" "}
+                    <a
+                      href="https://github.com/bitcoin-dev-project/who-funds-bitcoin-development"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-orange-500 hover:text-orange-600 inline-flex items-center gap-1"
+                    >
+                      GitHub <ExternalLink className="h-3 w-3" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
