@@ -7,9 +7,7 @@ import FundingStats from "@/components/funding/FundingStats";
 import FilterSelects from "@/components/funding/FilterSelects";
 import FundingTable from "@/components/funding/FundingTable";
 import { ThemeToggle } from "../ThemeToggle";
-import FundingAggregatesTable, {
-  aggregatesData,
-} from "./FundingAggregatesTable";
+import { aggregatesData } from "./FundingAggregatesTable";
 
 export interface FundingEntry {
   funder: string;
@@ -34,6 +32,7 @@ export default function FundingPage() {
   const [selectedRecipient, setSelectedRecipient] = useState<string>("all");
   const [selectedYear, setSelectedYear] = useState<string>("all");
   const [sortDirection, setSortDirection] = useState<"desc" | "asc">("desc");
+
   // Check if any filters are active
   const hasActiveFilters = useMemo(() => {
     return (
@@ -184,21 +183,6 @@ export default function FundingPage() {
             </div>
           ) : (
             <div className="max-w-7xl mx-auto space-y-12">
-              {/* Aggregated Donations Section */}
-              <div
-                className={`space-y-4 transition-opacity duration-500 ease-in-out ${
-                  hasActiveFilters
-                    ? "opacity-0 h-0 overflow-hidden my-0"
-                    : "opacity-100 h-auto my-8"
-                }`}
-              >
-                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-                  Aggregated Donations
-                </h2>
-                <FundingAggregatesTable data={aggregatesData} />
-              </div>
-
-              {/* Individual Donations Section */}
               <div className="space-y-4">
                 <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
                   {/* Search Input */}
@@ -233,8 +217,10 @@ export default function FundingPage() {
 
                 <FundingTable
                   data={filteredData}
+                  aggregateData={aggregatesData}
                   sortDirection={sortDirection}
                   setSortDirection={setSortDirection}
+                  showAggregates={!hasActiveFilters}
                 />
               </div>
 

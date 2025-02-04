@@ -1,17 +1,22 @@
 import { ExternalLink, ArrowDown, ArrowUp } from "lucide-react";
 import { useEffect, useState } from "react";
 import { FundingEntry } from "./FundingPage";
+import { AggregateEntry } from "./FundingAggregatesTable";
 
 interface FundingTableProps {
   data: FundingEntry[];
+  aggregateData: AggregateEntry[];
   sortDirection: "asc" | "desc";
   setSortDirection: (direction: "asc" | "desc") => void;
+  showAggregates: boolean;
 }
 
 const FundingTable: React.FC<FundingTableProps> = ({
   data,
+  aggregateData,
   sortDirection,
   setSortDirection,
+  showAggregates,
 }) => {
   const [, setIsMobile] = useState(false);
 
@@ -25,7 +30,7 @@ const FundingTable: React.FC<FundingTableProps> = ({
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
-  // Table view for desktop remains the same as before
+  // Table view for desktop
   const TableView: React.FC = () => (
     <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
       <thead className="bg-gray-50 dark:bg-gray-800">
@@ -81,6 +86,58 @@ const FundingTable: React.FC<FundingTableProps> = ({
         </tr>
       </thead>
       <tbody className="bg-white dark:bg-gray-900 divide-y divide-gray-200 dark:divide-gray-700">
+        {showAggregates && (
+          <>
+            {/* Section header for aggregated data */}
+            <tr>
+              <td
+                colSpan={6}
+                className="px-6 py-3 bg-orange-50 dark:bg-gray-500/50 text-sm font-semibold text-gray-900 dark:text-gray-100"
+              >
+                Aggregated Donations
+              </td>
+            </tr>
+            {/* Aggregated data rows */}
+            {aggregateData.map((row, index) => (
+              <tr
+                key={`aggregate-${index}`}
+                className="bg-orange-50/50 dark:bg-gray-500/30 hover:bg-orange-100/50 dark:hover:bg-gray-700/50"
+              >
+                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                  {row.funder}
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm">
+                  {row.recipientCount} recipients
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm">
+                  {row.amount}
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm">—</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm">
+                  {row.source_url ? (
+                    <a
+                      href={row.source_url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-orange-500 hover:text-orange-600 inline-flex items-center gap-1"
+                    >
+                      Link <ExternalLink className="h-4 w-4" />
+                    </a>
+                  ) : (
+                    "-"
+                  )}
+                </td>
+                <td className="px-6 py-4 text-sm">{row.notes || ""}</td>
+              </tr>
+            ))}
+            {/* Divider after aggregated data */}
+            <tr>
+              <td colSpan={6} className="h-4" />
+            </tr>
+          </>
+        )}
+
+        {/* Regular data rows */}
         {data.length === 0 ? (
           <tr>
             <td
@@ -127,9 +184,56 @@ const FundingTable: React.FC<FundingTableProps> = ({
     </table>
   );
 
-  // Updated Card view for mobile
+  // Card view for mobile
   const CardView: React.FC = () => (
     <div className="space-y-4">
+      {showAggregates && (
+        <>
+          <div className="bg-orange-50 dark:bg-gray-500/50 px-4 py-2 rounded-lg text-sm font-semibold text-gray-900 dark:text-gray-100">
+            Aggregated Donations
+          </div>
+          {aggregateData.map((row, index) => (
+            <div
+              key={`aggregate-${index}`}
+              className="bg-orange-50/50 dark:bg-gray-500/30 rounded-lg shadow p-4 flex flex-col border border-orange-100/50 dark:border-gray-700"
+            >
+              <div className="flex justify-between items-start mb-1">
+                <div className="font-medium text-base">{row.funder}</div>
+                <div className="text-sm font-medium">{row.amount}</div>
+              </div>
+              <div className="text-sm text-gray-600 dark:text-gray-300 mb-1">
+                {row.recipientCount} recipients
+              </div>
+              {row.notes && (
+                <div className="text-xs text-gray-500 dark:text-gray-400 mb-4">
+                  {row.notes}
+                </div>
+              )}
+              <div className="mt-auto pt-3 border-t border-orange-100/50 dark:border-gray-700 flex items-center justify-between text-xs">
+                <div className="flex items-center gap-1">
+                  <span className="text-gray-500 dark:text-gray-400">
+                    Source:
+                  </span>
+                  {row.source_url ? (
+                    <a
+                      href={row.source_url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-orange-500 hover:text-orange-600 inline-flex items-center gap-1"
+                    >
+                      Link <ExternalLink className="h-3 w-3" />
+                    </a>
+                  ) : (
+                    <span>-</span>
+                  )}
+                </div>
+              </div>
+            </div>
+          ))}
+          <div className="h-4" />
+        </>
+      )}
+
       {data.length === 0 ? (
         <div className="text-center py-10 text-sm text-gray-500 dark:text-gray-400">
           No matching records found
@@ -140,33 +244,25 @@ const FundingTable: React.FC<FundingTableProps> = ({
             key={index}
             className="bg-white dark:bg-gray-900 rounded-lg shadow p-4 flex flex-col border border-gray-200 dark:border-gray-700"
           >
-            {/* Header with Funder and Amount */}
             <div className="flex justify-between items-start mb-1">
               <div className="font-medium text-base">{row.funder}</div>
               <div className="text-sm font-medium">
                 {row.amount === "NA" ? "" : row.amount}
               </div>
             </div>
-
-            {/* Recipient */}
             <div className="text-sm text-gray-600 dark:text-gray-300 mb-1">
               to {row.recipient}
             </div>
-
-            {/* Notes (if they exist) */}
             {row.notes && (
               <div className="text-xs text-gray-500 dark:text-gray-400 mb-4">
                 {row.notes}
               </div>
             )}
-
-            {/* Footer with Date and Source */}
             <div className="mt-auto pt-3 border-t border-gray-200 dark:border-gray-700 flex items-center justify-between text-xs">
               <div className="flex items-center gap-1">
                 <span className="text-gray-500 dark:text-gray-400">Date:</span>
                 <span>{row.date}</span>
               </div>
-
               <div className="flex items-center gap-1">
                 <span className="text-gray-500 dark:text-gray-400">
                   Source:

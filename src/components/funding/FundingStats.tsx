@@ -156,10 +156,6 @@ const FundingStats: React.FC<FundingStatsProps> = ({
       }
     }
 
-    if (hasActiveFilters) {
-      parts.push("(excluding aggregate donations)");
-    }
-
     return parts.join(" ");
   }, [
     selectedFunder,
