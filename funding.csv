@@ -1,20 +1,14 @@
 funder,recipient,amount,date,source_url,notes
+Alex Morcos,Chaincode Labs,NA,2014/08,http://web.archive.org/web/20140814051959/http://chaincode.com/,founding donor
+Suhas Daftuar,Chaincode Labs,NA,2014/08,http://web.archive.org/web/20140814051959/http://chaincode.com/,founding donor
 John Pfeffer,MIT DCI,NA,2018/01,http://web.archive.org/web/20221126163019/https://polylunar.com/bitcoin-grants-tracker/,
-BitMEX,MIT DCI,"250,000 USD",2019/05,https://blog.bitmex.com/donation/,
-BitMEX,Michael Ford,"50,000 USD",2019/07,https://blog.bitmex.com/2019-ford-bitcoin-grant/,
 DG Lab,BTCPay Server,"30,000 USD",2019/11,https://blog.btcpayserver.org/dg-grant-2019/,
-BitMEX,MIT DCI,"250,000 USD",2020/03,https://blog.bitmex.com/continued-support-of-bitcoin-development-hdr-provides-a-2nd-gift-to-the-mit-dci/,
 CardCoins & Payvant,Hennadii Stepanov,NA,2020/04,https://blog.cardcoins.co/cardcoins-and-bitcoin-core,
-BitMEX,Michael Ford,"100,000 USD",2020/05,https://blog.bitmex.com/hdr-global-trading-increases-bitcoin-developer-grant-to-us100000/
 OKCoin,BTCPay Server,"100,000 USD",2020/05,http://web.archive.org/web/20200617021202/https://blog.okcoin.com/2020/05/28/btcpay-developer-grant-recipient/,
-BitMEX,Gleb Naumenko,"100,000 USD",2020/06,https://blog.bitmex.com/bitcoin-developer-grant-provided-to-gleb-naumenko/,
-BitMEX,Amiti Uttarwar,"75,000 USD",2020/06,https://blog.bitmex.com/hdr-okcoin-join-forces-to-provide-a-us150000-grant-to-bitcoin-c%c6%92ore-developer-amiti-uttarwar/,
 OKCoin,Amiti Uttarwar,"75,000 USD",2020/06,http://web.archive.org/web/20200618175305/https://blog.okcoin.com/2020/06/18/okcoin-bitmex-provide-grant-to-bitcoin-core-developer-amiti-uttarwar/,
 Kraken,BTCPay Server,"150,000 USD",2020/06,https://bitcoinmagazine.com/business/kraken-announces-largest-ever-grant-to-btcpay,
-BitMEX,Jeremy Rubin,"50,000 USD",2020/07,https://blog.bitmex.com/bitcoin-developer-grant-provided-to-jeremy-rubin/,
 Paradigm,Anthony Towns,NA,2020/07,https://www.matthuang.com/funding_bitcoin_development,
 OKCoin,Marco Falke,"100,000 USD",2020/08,http://web.archive.org/web/20210115195319/https://blog.okcoin.com/2020/08/06/introducing-marco-falke-okcoins-fourth-developer-grant-recipient/,
-BitMEX,Calvin Kim,"40,000 USD",2020/08,https://blog.bitmex.com/bitcoin-developer-grant-provided-to-calvin-kim/,
 John Pfeffer,Antoine Riard,NA,2020/09,https://twitter.com/jlppfeffer/status/1310676763522019331,
 BTSE,BTCPay Server,"80,000 USD",2020/10,https://blog.btcpayserver.org/btcpay-server-btse/,
 OKCoin,Fabian Jahr,NA,2020/10,http://web.archive.org/web/20230323203907/https://blog.okcoin.com/fabian-jahr-receives-independent-developer-grant/,
@@ -28,7 +22,6 @@ Coinbase,0xB10C,NA,2020/12,https://x.com/coinbase/status/1341549152090673153,thr
 Coinbase,João Barbosa,NA,2020/12,https://x.com/coinbase/status/1341549152090673153,through their Crypto Community Fund
 Jack Dorsey & Jay-Z,BTrust,"500 BTC",2021/02,https://x.com/jack/status/1360114881978982403
 Jack Dorsey,Brink,1 BTC,2021/02,https://x.com/bitcoinbrink/status/1364250436669161474,
-BitMEX,Michael Ford,"100,000 USD",2021/02,https://blog.bitmex.com/100x-group-provides-third-grant-to-bitcoin-maintainer-michael-ford/,
 Independent Reserve,Michael Ford,"18,500 USD",2021/02,https://www.independentreserve.com/blog/news/independent-reserve-to-sponsor-bitcoin-core-development
 Superlunar,MIT DCI,"1,000,000 USD",2021/02,https://www.gemini.com/blog/gemini-opportunity-fund-donates-to-mits-digital-currency-initiative,over 4 years
 CoinShares,MIT DCI,"500,000 USD",2021/02,http://web.archive.org/web/20210625124550/https://coinshares.com/news/coinshares-contributes-to-mit-digital-currency-initiative-to-fund-independent-research-and-open-source-development/,over 4 years
@@ -37,19 +30,14 @@ BtcTurk,Brink,"210,000 USD",2021/03,https://btcturk.medium.com/how-much-bitcoin-
 OKCoin,Antoine Riard,NA,2021/03,http://web.archive.org/web/20210304173240/https://blog.okcoin.com/2021/03/04/okcoin-bitcoin-developer-grant-antoine-riard/,
 Superlunar,Mempool,"25,000 USD",2021/03,https://www.gemini.com/blog/gemini-supports-bitcoin-ecosystem-with-usd25k-mempool-space-sponsorship,
 Peter McCormack,Brink,"10.000 USD",2021/05,https://x.com/PeterMcCormack/status/1366727874670194695
-BitMEX,Calvin Kim,"100,000 USD",2021/05,https://blog.bitmex.com/renewal-of-calvin-kims-bitcoin-developer-grant/,
 Superlunar,Amiti Uttarwar,NA,2021/05,https://www.gemini.com/blog/gemini-to-sponsor-bitcoin-core-developer-amiti-uttarwar,
 Superlunar,Dhruv Mehta,NA,2021/06,https://www.gemini.com/blog/gemini-to-sponsor-bitcoin-core-developers-dhruv-mehta-and-jarol-rodriguez,
 Superlunar,Jarol Rodriguez,NA,2021/06,https://www.gemini.com/blog/gemini-to-sponsor-bitcoin-core-developers-dhruv-mehta-and-jarol-rodriguez,
 BlockFi,Brink,"150,000 USD",2021/06,https://web.archive.org/web/20210702182803/https://www.blockfi.com/blockfi-sponsors-brink-to-support-open-source-bitcoin-development,
-BitMEX,Gleb Naumenko,"100,000 USD",2021/06,https://blog.bitmex.com/renewal-of-gleb-naumenkos-bitcoin-developer-grant/,
 Strike,Jon Atack,"100,000 USD",2021/06,https://twitter.com/Strike/status/1409938668890968066,
-BitMEX,Sjors Provoost,"37,500 USD",2021/08,https://blog.bitmex.com/new-open-source-bitcoin-developer-grant-for-sjors-provoost-2/
 Compass Mining,Jon Atack,"80,000 USD",2021/08,https://compassmining.io/education/compass-core-developer-donation/,
 FTX,Brink,"450,000 USD",2021/08,https://twitter.com/ftx_official/status/1426197748588679172,over 3 years
 CMS Holdings,Brink,"200,000 USD",2021/09,https://github.com/bitcoinbrink/website/pull/59/commits/6790334c5e9d09544aa0ea897a8902a16ccae0c9,
-BitMEX,Chris Coverdale,"33,333 USD",2021/09,https://blog.bitmex.com/chris-coverdale/,
-BitMEX,Rene Pickhardt,"33,333 USD",2021/09,https://blog.bitmex.com/rene-pickhardt/,
 OKCoin,Marco Falke,NA,2021/10,http://web.archive.org/web/20230323205148/https://blog.okcoin.com/okcoin-supports-marco-falke-bitcoin-core-maintainer-for-another-year/,
 Marathon Digital Holdings,Jonas Schnelli,"96,000 USD",2021/01,https://ir.marathondh.com/news-events/press-releases/detail/1225/marathon-patent-group-provides-one-year-grant-to,
 OKCoin,João Barbosa,NA,2021/06,http://web.archive.org/web/20220124233935/https://blog.okcoin.com/2021/06/03/meet-joao-barbosa-our-new-open-source-developer-grant-recipient/,
@@ -61,10 +49,6 @@ TABConf,Brink,"5,000 USD",2022/01,https://x.com/bitcoinbrink/status/147838987821
 Coinbase,Brink,"300,000 USD",2022/01,https://twitter.com/bitcoinbrink/status/1486408169165410313,
 OKCoin,Brink,"150,000 USD",2022,http://web.archive.org/web/20220522175407/https://blog.okcoin.com/2022/04/19/meet-gloria-zhao-bitcoin-core-developer-and-okcoin-grantee/,
 Craig Hammell,Brink,"1,000,000 USD",2022/04,https://twitter.com/bitcoinbrink/status/1519331178679046145,
-BitMEX,Gleb Naumenko,"50,000 USD",2022/05,https://blog.bitmex.com/renewal-of-gleb-naumenkos-bitcoin-developer-grant-3/,
-BitMEX,Chris Coverdale,"25,000 USD",2022/05,https://blog.bitmex.com/renewal-of-chris-coverdales-bitcoin-developer-grant/,
-BitMEX,Rene Pickhardt,"25,000 USD",2022/05,https://blog.bitmex.com/renewal-of-rene-pickhardts-bitcoin-developer-grant/,
-BitMEX,Sjors Provoost,"32,500 USD",2022/05,https://blog.bitmex.com/renewal-of-sjors-provoosts-bitcoin-developer-grant/,
 Coinbase,Josie,NA,2022/01,https://blog.coinbase.com/announcing-our-second-developer-grant-winners-ffd3f6e93860,through their Crypto Community Fund
 Exodus,Brink,"350,000 USD",2022/01,https://twitter.com/bitcoinbrink/status/1479104146137489414,
 Superlunar,Dhruv Mehta,NA,2022/06,https://www.superlunar.com/post/raising-the-free-and-rebellious-with-dhruv-mehta,
@@ -76,11 +60,8 @@ Wences Casares,Vinteum,NA,2022/08,https://medium.com/vinteum-org/announcing-vint
 Sebastián Serrano,Vinteum,NA,2022/08,https://medium.com/vinteum-org/announcing-vinteum-supporting-bitcoin-development-in-brazil-bb74559ef164,founding donor
 OKCoin,Vinteum,NA,2022/10,https://web.archive.org/web/20221012213003/https://blog.okcoin.com/meet-vinteum-and-qala-our-new-bitcoin-open-source-grant-recipients/,
 OKCoin,Qala,NA,2022/10,https://web.archive.org/web/20221012213003/https://blog.okcoin.com/meet-vinteum-and-qala-our-new-bitcoin-open-source-grant-recipients/,
-BitMEX,Chris Coverdale,"25,000 USD",2022/10,https://blog.bitmex.com/renewal-of-chris-coverdales-bitcoin-developer-grant-2/,
 Superlunar,Ruben Somsen,NA,2022/09,https://superlunar.com/post/creating-new-chains-for-bitcoin,
 Superlunar,Josie,NA,2022/10,https://www.superlunar.com/post/analyzing-data-and-describing-elephants-with-josie,
-BitMEX,Rene Pickhardt,"25,000 USD",2022/11,https://blog.bitmex.com/renewal-of-rene-pickhardts-bitcoin-developer-grant-2/,
-BitMEX,Sjors Provoost,"22,500 USD",2022/11,https://blog.bitmex.com/renewal-of-sjors-provoosts-bitcoin-developer-grant-2/,
 Silvergate Bank,Brink,NA,2022/05,https://twitter.com/bitcoinbrink/status/1527718341737062400,$25k quarterly donation
 Superlunar,Qala,NA,2022/06,https://www.superlunar.com/post/africas-new-generation-of-bitcoin-developers,
 Lightspark,Brink,"150,000 USD",2023/02,https://x.com/bitcoinbrink/status/1625926698100219904,
@@ -89,9 +70,6 @@ Samara Asset Group,Brink,"450,000 USD",2023/04,https://x.com/bitcoinbrink/status
 Balaji Srinivasan,Chaincode Labs,"16.55 BTC",2023/05,https://x.com/balajis/status/1653451860488130565,equivalent to $500k
 Jack Dorsey,OpenSats,"4,670,000 USD",2023/05,https://opensats.org/blog/opensats-receives-additional-funding-of-dollar10m-from-startsmall,also $5M for the Nostr Fund and $330k for the Operations Budget
 Marathon Digital Holdings,Brink,"500,000 USD",2023/05,https://x.com/bitcoinbrink/status/1659304041137020933,
-BitMEX,Brink,"50,000 USD",2023/05,https://blog.bitmex.com/brink-sponsorship/,
-BitMEX,Chris Coverdale,"25,000 USD",2023/05,https://blog.bitmex.com/renewal-of-chris-coverdales-bitcoin-developer-grant-3/,
-BitMEX,Rene Pickhardt,"25,000 USD",2023/05,https://blog.bitmex.com/renewal-of-rene-pickhardts-bitcoin-developer-grant-3/,
 OKCoin,Dusty Daemon,NA,2023/05,http://web.archive.org/web/20240112223459/https://blog.okcoin.com/meet-bitcoin-lightning-devotee-dusty-daemon-our-new-open-source-developer-grant-recipient/,
 Stakwork,Brink,"180,000 USD",2023/06,https://x.com/bitcoinbrink/status/1666144367902326790,over 3 years
 Jack Dorsey,Brink,"5,000,000 USD",2023/06,https://x.com/bitcoinbrink/status/1669012369727537152,over 5 years
