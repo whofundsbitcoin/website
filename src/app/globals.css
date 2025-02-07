@@ -8,3 +8,12 @@
     --radius: 0.5rem;
   }
 }
+
+@layer utilities {
+  .font-tektur {
+    font-family: var(--font-tektur);
+  }
+  .font-space-grotesk {
+    font-family: var(--font-space-grotesk);
+  }
+}

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Tektur } from "next/font/google";
+import { Geist, Geist_Mono, Space_Grotesk, Tektur } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 
@@ -18,6 +18,11 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const spaceGrotesk = Space_Grotesk({
+  variable: '--font-space-grotesk',
+  subsets: ['latin'],
+});
+
 export const metadata: Metadata = {
   title: "Who Funds Bitcoin Development?",
   description:
@@ -32,7 +37,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${tektur.className} ${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${spaceGrotesk.variable} ${geistSans.variable} ${geistMono.className} ${tektur.variable} antialiased`}
       >
         <ThemeProvider attribute="class" defaultTheme="system">
           {children}

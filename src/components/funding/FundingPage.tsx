@@ -134,8 +134,8 @@ export default function FundingPage() {
         <div className="flex-1 flex flex-col justify-center items-center px-4 py-16 bg-gradient-to-b from-orange-50 to-white dark:from-gray-900 dark:to-black">
           <div className="max-w-5xl w-full mx-auto text-center space-y-8">
             {/* Title */}
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight text-gray-900 dark:text-white">
-              <span>WHO FUNDS BITCOIN</span>{" "}
+            <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight text-gray-900 dark:text-white font-tektur">
+              <span>WHO FUNDS ₿ITCOIN</span>{" "}
               <span className="max-[480px]:text-5xl">DEVELOPMENT?</span>
             </h1>
             {/* Tagline */}
@@ -145,7 +145,7 @@ export default function FundingPage() {
             </p>
 
             {/* Stats Card */}
-            <div className="mt-12 mb-8">
+            <div className="mt-12 mb-8 font-tektur">
               {!isLoading && !error && (
                 <FundingStats
                   data={filteredData}
@@ -165,7 +165,15 @@ export default function FundingPage() {
                 should control it. But equally, no single entity is responsible
                 for improving it. It is easy for Bitcoin users and companies to
                 free-ride without contributing to Bitcoin development — a
-                classic tragedy of the commons.
+                classic tragedy of the commons.{" "}
+                <a
+                  href="https://www.matthuang.com/funding_bitcoin_development/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-300 dark:text-gray-600 hover:text-orange-500 dark:hover:text-orange-400 text-sm opacity-50 hover:opacity-100 transition-all"
+                >
+                  ↗
+                </a>
               </p>
             </div>
           </div>
