@@ -1,5 +1,6 @@
 import React, { useMemo } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { AggregateEntry } from "./FundingTable";
 
 interface FundingEntry {
   funder: string;
@@ -8,14 +9,6 @@ interface FundingEntry {
   date: string;
   source_url: string | null;
   notes: string | null;
-}
-
-interface AggregateEntry {
-  funder: string;
-  recipientCount: number;
-  amount: string;
-  source_url: string;
-  notes: string;
 }
 
 interface FundingStatsProps {
@@ -63,6 +56,8 @@ const FundingStats: React.FC<FundingStatsProps> = ({
       let totalUSD = 0;
       let totalBTC = 0;
 
+      let hasIncompleteAmount = false;
+
       // Process individual donations
       data.forEach((entry) => {
         if (!entry.amount || entry.amount === "NA") return;
@@ -85,6 +80,9 @@ const FundingStats: React.FC<FundingStatsProps> = ({
       if (!hasActiveFilters) {
         // Add unique funders and their recipient counts from aggregates
         aggregateData.forEach((agg) => {
+          if (agg.isIncomplete) {
+            hasIncompleteAmount = true;
+          }
           funders.add(agg.funder);
 
           // Process aggregate amounts
@@ -117,7 +115,11 @@ const FundingStats: React.FC<FundingStatsProps> = ({
         uniqueFunders: funders.size,
         uniqueRecipients: recipients.size,
         yearRange: { minYear, maxYear },
-        formattedTotals: formatCurrencies(totalUSD, totalBTC),
+        formattedTotals: formatCurrencies(
+          totalUSD,
+          totalBTC,
+          hasIncompleteAmount
+        ),
       };
     }, [data, aggregateData, hasActiveFilters]);
 
@@ -164,7 +166,6 @@ const FundingStats: React.FC<FundingStatsProps> = ({
     uniqueFunders,
     uniqueRecipients,
     yearRange,
-    hasActiveFilters,
   ]);
 
   return (
@@ -187,7 +188,11 @@ const FundingStats: React.FC<FundingStatsProps> = ({
 };
 
 // Helper function to format currency amounts
-const formatCurrencies = (usd: number, btc: number): string => {
+const formatCurrencies = (
+  usd: number,
+  btc: number,
+  hasIncompleteAmount: boolean
+): string => {
   const usdStr = new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: "USD",
@@ -195,9 +200,18 @@ const formatCurrencies = (usd: number, btc: number): string => {
     maximumFractionDigits: 0,
   }).format(usd);
 
-  if (btc === 0) return usdStr;
-  if (usd === 0) return `${btc.toFixed(2)} BTC`;
-  return `${usdStr} & ${btc.toFixed(2)} BTC`;
+  let result = "";
+  if (usd > 0) result += usdStr;
+  if (btc > 0) {
+    if (result) result += " & ";
+    result += `${btc.toFixed(2)} BTC`;
+  }
+
+  if (hasIncompleteAmount) {
+    result += "+ ";
+  }
+
+  return result;
 };
 
 export default FundingStats;

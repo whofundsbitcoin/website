@@ -7,7 +7,8 @@ import FundingStats from "@/components/funding/FundingStats";
 import FilterSelects from "@/components/funding/FilterSelects";
 import FundingTable from "@/components/funding/FundingTable";
 import { ThemeToggle } from "../ThemeToggle";
-import { aggregatesData } from "./FundingAggregatesTable";
+import aggregatesData from "@/data/funding_aggregates.json";
+import FootnotesSection from "./FootnotesSection";
 
 export interface FundingEntry {
   funder: string;
@@ -119,7 +120,7 @@ export default function FundingPage() {
     selectedFunder,
     selectedRecipient,
     selectedYear,
-    sortDirection,
+    sortData,
   ]);
 
   return (
@@ -248,6 +249,7 @@ export default function FundingPage() {
                   </a>
                 </div>
               </div>
+              <FootnotesSection />
             </div>
           )}
         </div>

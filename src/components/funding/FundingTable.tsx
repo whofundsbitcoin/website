@@ -1,7 +1,18 @@
 import { ExternalLink, ArrowDown, ArrowUp } from "lucide-react";
 import { useEffect, useState } from "react";
 import { FundingEntry } from "./FundingPage";
-import { AggregateEntry } from "./FundingAggregatesTable";
+import FootnotesSection from "./FootnotesSection";
+import AmountCell from "./AmountCell";
+
+export interface AggregateEntry {
+  funder: string;
+  recipientCount: number;
+  amount: string;
+  source_url: string;
+  notes: string;
+  dateRange: string;
+  isIncomplete?: boolean;
+}
 
 interface FundingTableProps {
   data: FundingEntry[];
@@ -109,10 +120,17 @@ const FundingTable: React.FC<FundingTableProps> = ({
                 <td className="px-6 py-4 whitespace-nowrap text-sm">
                   {row.recipientCount} recipients
                 </td>
+                {row.amount && (
+                  <td className="px-6 py-4 whitespace-nowrap text-sm">
+                    <AmountCell
+                      amount={row.amount}
+                      isIncomplete={row.isIncomplete}
+                    />
+                  </td>
+                )}
                 <td className="px-6 py-4 whitespace-nowrap text-sm">
-                  {row.amount}
+                  {row.dateRange || "-"}
                 </td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm">—</td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm">
                   {row.source_url ? (
                     <a
@@ -130,9 +148,14 @@ const FundingTable: React.FC<FundingTableProps> = ({
                 <td className="px-6 py-4 text-sm">{row.notes || ""}</td>
               </tr>
             ))}
-            {/* Divider after aggregated data */}
+            {/* Section header for latest donations */}
             <tr>
-              <td colSpan={6} className="h-4" />
+              <td
+                colSpan={6}
+                className="px-6 py-3 bg-gray-50 dark:bg-gray-800 text-sm font-semibold text-gray-900 dark:text-gray-100"
+              >
+                Latest Donations
+              </td>
             </tr>
           </>
         )}
@@ -199,7 +222,12 @@ const FundingTable: React.FC<FundingTableProps> = ({
             >
               <div className="flex justify-between items-start mb-1">
                 <div className="font-medium text-base">{row.funder}</div>
-                <div className="text-sm font-medium">{row.amount}</div>
+                <div className="text-sm font-medium">
+                  <AmountCell
+                    amount={row.amount}
+                    isIncomplete={row.isIncomplete}
+                  />
+                </div>
               </div>
               <div className="text-sm text-gray-600 dark:text-gray-300 mb-1">
                 {row.recipientCount} recipients
@@ -210,6 +238,12 @@ const FundingTable: React.FC<FundingTableProps> = ({
                 </div>
               )}
               <div className="mt-auto pt-3 border-t border-orange-100/50 dark:border-gray-700 flex items-center justify-between text-xs">
+                <div className="flex items-center gap-1">
+                  <span className="text-gray-500 dark:text-gray-400">
+                    Date:
+                  </span>
+                  <span>{row.dateRange}</span>
+                </div>
                 <div className="flex items-center gap-1">
                   <span className="text-gray-500 dark:text-gray-400">
                     Source:
@@ -230,7 +264,9 @@ const FundingTable: React.FC<FundingTableProps> = ({
               </div>
             </div>
           ))}
-          <div className="h-4" />
+          <div className="bg-gray-50 dark:bg-gray-800 px-4 py-2 rounded-lg text-sm font-semibold text-gray-900 dark:text-gray-100">
+            Latest Donations
+          </div>
         </>
       )}
 
