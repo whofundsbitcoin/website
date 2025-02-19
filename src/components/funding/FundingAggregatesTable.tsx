@@ -71,6 +71,28 @@ export const aggregatesData = [
       "https://www.superlunar.com/post/africas-new-generation-of-bitcoin-developers",
     ],
   },
+  {
+    funder: "OKCoin",
+    recipientCount: 10,
+    amount: "675,000 USD",
+    source_url: "https://developergrant.okcoin.com/",
+    notes: "Open Source Developer Grants",
+    source_urls: [
+      "http://web.archive.org/web/20200617021202/https://blog.okcoin.com/2020/05/28/btcpay-developer-grant-recipient/",
+      "http://web.archive.org/web/20200618175305/https://blog.okcoin.com/2020/06/18/okcoin-bitmex-provide-grant-to-bitcoin-core-developer-amiti-uttarwar/",
+      "http://web.archive.org/web/20210115195319/https://blog.okcoin.com/2020/08/06/introducing-marco-falke-okcoins-fourth-developer-grant-recipient/",
+      "http://web.archive.org/web/20230323203907/https://blog.okcoin.com/fabian-jahr-receives-independent-developer-grant/",
+      "http://web.archive.org/web/20210304173240/https://blog.okcoin.com/2021/03/04/okcoin-bitcoin-developer-grant-antoine-riard/",
+      "http://web.archive.org/web/20230323205148/https://blog.okcoin.com/okcoin-supports-marco-falke-bitcoin-core-maintainer-for-another-year/",
+      "http://web.archive.org/web/20220124233935/https://blog.okcoin.com/2021/06/03/meet-joao-barbosa-our-new-open-source-developer-grant-recipient/",
+      "https://blog.okcoin.com/2021/06/10/supporting-bitcoin-development-with-a-100k-brink-grant",
+      "http://web.archive.org/web/20220522175407/https://blog.okcoin.com/2022/04/19/meet-gloria-zhao-bitcoin-core-developer-and-okcoin-grantee/",
+      "https://web.archive.org/web/20221012213003/https://blog.okcoin.com/meet-vinteum-and-qala-our-new-bitcoin-open-source-grant-recipients/",
+      "https://web.archive.org/web/20221012213003/https://blog.okcoin.com/meet-vinteum-and-qala-our-new-bitcoin-open-source-grant-recipients/",
+      "http://web.archive.org/web/20240112223459/https://blog.okcoin.com/meet-bitcoin-lightning-devotee-dusty-daemon-our-new-open-source-developer-grant-recipient/",
+      "https://github.com/bitcoinbrink/website/pull/124/commits/ac50ff407fd9cbab56b712cec9d9c33d13a981db",
+    ],
+  },
 ];
 export interface AggregateEntry {
   funder: string;
