@@ -6,7 +6,7 @@ import AmountCell from "./AmountCell";
 
 export interface AggregateEntry {
   funder: string;
-  recipientCount: number;
+  recipientCount: number | string;
   amount: string;
   source_url: string;
   notes: string;
@@ -21,6 +21,13 @@ interface FundingTableProps {
   setSortDirection: (direction: "asc" | "desc") => void;
   showAggregates: boolean;
 }
+
+const formatRecipientCount = (count: number | string): string => {
+  if (typeof count === "number") {
+    return `${count} ${count === 1 ? "recipient" : "recipients"}`;
+  }
+  return count.toString();
+};
 
 const FundingTable: React.FC<FundingTableProps> = ({
   data,
@@ -118,7 +125,7 @@ const FundingTable: React.FC<FundingTableProps> = ({
                   {row.funder}
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm">
-                  {row.recipientCount} recipients
+                  {formatRecipientCount(row.recipientCount)}
                 </td>
                 {row.amount && (
                   <td className="px-6 py-4 whitespace-nowrap text-sm">
@@ -230,7 +237,7 @@ const FundingTable: React.FC<FundingTableProps> = ({
                 </div>
               </div>
               <div className="text-sm text-gray-600 dark:text-gray-300 mb-1">
-                {row.recipientCount} recipients
+                {formatRecipientCount(row.recipientCount)}
               </div>
               {row.notes && (
                 <div className="text-xs text-gray-500 dark:text-gray-400 mb-4">

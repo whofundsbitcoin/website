@@ -102,10 +102,13 @@ const FundingStats: React.FC<FundingStatsProps> = ({
         });
 
         // Add recipient counts from aggregates
-        const additionalRecipients = aggregateData.reduce(
-          (sum, agg) => sum + agg.recipientCount,
-          0
-        );
+        const additionalRecipients = aggregateData.reduce((sum, agg) => {
+          if (typeof agg.recipientCount === "number") {
+            return sum + agg.recipientCount;
+          }
+          // If it's a string, we'll count it as 1 recipient
+          return sum + 1;
+        }, 0);
         for (let i = 0; i < additionalRecipients; i++) {
           recipients.add(`aggregate_recipient_${i}`);
         }

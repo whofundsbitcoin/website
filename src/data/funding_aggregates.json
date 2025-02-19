@@ -25,6 +25,22 @@
     "dateRange": "2020 - Present"
   },
   {
+    "funder": "Bitwise",
+    "recipientCount": "Brink, OpenSats, HRF",
+    "amount": "%",
+    "source_url": "https://bitbetf.com/funding-bitcoin",
+    "notes": "10% Bitcoin ETF profits pledge",
+    "dateRange": "2024 - Present"
+  },
+  {
+    "funder": "ARK Invest",
+    "recipientCount": "Brink, OpenSats & HRF",
+    "amount": "%",
+    "source_url": "https://njump.me/nevent1qqsqn2s0vekw45jxahy3llcg2k3jxf804kkjma45508w6g8gnht2g4cprpmhxue69uhhyetvv9ujumn0wdmksetjv5hxxmmdqyt8wumn8ghj7un9d3shjtnwdaehgu3wvfskueqpz3mhxue69uhhyetvv9ujuerpd46hxtnfdupzqpxfzhdwlm3cx9l6wdzyft8w8y9gy607tqgtyfq7tekaxs7lhmxfspda99",
+    "notes": "Fixed % revenue pledge",
+    "dateRange": "2024 - Present"
+  },
+  {
     "funder": "OKCoin",
     "recipientCount": 10,
     "amount": "675,000 USD",
