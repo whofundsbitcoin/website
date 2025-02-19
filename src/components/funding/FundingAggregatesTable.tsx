@@ -49,6 +49,28 @@ export const aggregatesData = [
       "https://blog.bitmex.com/renewal-of-rene-pickhardts-bitcoin-developer-grant-3/",
     ],
   },
+  {
+    funder: "Superlunar",
+    recipientCount: 13,
+    amount: "1,225,000 USD",
+    source_url: "https://superlunar.com/fund",
+    notes: "An extension of the Gemini Opportunity Fund",
+    source_urls: [
+      "http://web.archive.org/web/20221122065633/https://www.gemini.com/blog/gemini-opportunity-fund-launches-to-support-bitcoin-core-developers",
+      "http://web.archive.org/web/20221122065633/https://www.gemini.com/blog/gemini-opportunity-fund-launches-to-support-bitcoin-core-developers",
+      "https://www.gemini.com/blog/gemini-opportunity-fund-donates-to-mits-digital-currency-initiative",
+      "https://www.gemini.com/blog/gemini-supports-bitcoin-ecosystem-with-usd25k-mempool-space-sponsorship",
+      "https://www.gemini.com/blog/gemini-to-sponsor-bitcoin-core-developer-amiti-uttarwar",
+      "https://www.gemini.com/blog/gemini-to-sponsor-bitcoin-core-developers-dhruv-mehta-and-jarol-rodriguez",
+      "https://www.gemini.com/blog/gemini-to-sponsor-bitcoin-core-developers-dhruv-mehta-and-jarol-rodriguez",
+      "https://www.gemini.com/blog/gemini-sponsors-bitcoin-core-maintainer-fanquake",
+      "https://www.superlunar.com/post/raising-the-free-and-rebellious-with-dhruv-mehta",
+      "https://www.superlunar.com/post/beautifying-bitcoin-with-jarol-rodriguez",
+      "https://superlunar.com/post/creating-new-chains-for-bitcoin",
+      "https://www.superlunar.com/post/analyzing-data-and-describing-elephants-with-josie",
+      "https://www.superlunar.com/post/africas-new-generation-of-bitcoin-developers",
+    ],
+  },
 ];
 export interface AggregateEntry {
   funder: string;
