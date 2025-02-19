@@ -8,6 +8,14 @@
     "dateRange": "2020 - Present"
   },
   {
+    "funder": "OpenSats",
+    "recipientCount": 30,
+    "amount": "NA",
+    "source_url": "https://opensats.org/funds/general",
+    "notes": "General Fund",
+    "dateRange": "2023 - Present"
+  },
+  {
     "funder": "HRF",
     "recipientCount": 174,
     "amount": "5,500,000 USD",
