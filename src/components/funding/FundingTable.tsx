@@ -93,14 +93,12 @@ const FundingTable: React.FC<FundingTableProps> = ({
             scope="col"
             className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider"
           >
-            Source
+            Notes
           </th>
           <th
             scope="col"
             className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider"
-          >
-            Notes
-          </th>
+          ></th>
         </tr>
       </thead>
       <tbody className="bg-white dark:bg-gray-900 divide-y divide-gray-200 dark:divide-gray-700">
@@ -138,6 +136,7 @@ const FundingTable: React.FC<FundingTableProps> = ({
                 <td className="px-6 py-4 whitespace-nowrap text-sm">
                   {row.dateRange || "-"}
                 </td>
+                <td className="px-6 py-4 text-sm">{row.notes || ""}</td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm">
                   {row.source_url ? (
                     <a
@@ -146,13 +145,12 @@ const FundingTable: React.FC<FundingTableProps> = ({
                       rel="noopener noreferrer"
                       className="text-orange-500 hover:text-orange-600 inline-flex items-center gap-1"
                     >
-                      Link <ExternalLink className="h-4 w-4" />
+                      <ExternalLink className="h-4 w-4" />
                     </a>
                   ) : (
                     "-"
                   )}
                 </td>
-                <td className="px-6 py-4 text-sm">{row.notes || ""}</td>
               </tr>
             ))}
             {/* Section header for latest donations */}
@@ -192,6 +190,7 @@ const FundingTable: React.FC<FundingTableProps> = ({
               <td className="px-6 py-4 whitespace-nowrap text-sm">
                 {row.date}
               </td>
+              <td className="px-6 py-4 text-sm">{row.notes || ""}</td>
               <td className="px-6 py-4 whitespace-nowrap text-sm">
                 {row.source_url ? (
                   <a
@@ -200,13 +199,12 @@ const FundingTable: React.FC<FundingTableProps> = ({
                     rel="noopener noreferrer"
                     className="text-orange-500 hover:text-orange-600 inline-flex items-center gap-1"
                   >
-                    Link <ExternalLink className="h-4 w-4" />
+                    <ExternalLink className="h-4 w-4" />
                   </a>
                 ) : (
                   "-"
                 )}
               </td>
-              <td className="px-6 py-4 text-sm">{row.notes || ""}</td>
             </tr>
           ))
         )}
@@ -252,9 +250,6 @@ const FundingTable: React.FC<FundingTableProps> = ({
                   <span>{row.dateRange}</span>
                 </div>
                 <div className="flex items-center gap-1">
-                  <span className="text-gray-500 dark:text-gray-400">
-                    Source:
-                  </span>
                   {row.source_url ? (
                     <a
                       href={row.source_url}
@@ -262,7 +257,7 @@ const FundingTable: React.FC<FundingTableProps> = ({
                       rel="noopener noreferrer"
                       className="text-orange-500 hover:text-orange-600 inline-flex items-center gap-1"
                     >
-                      Link <ExternalLink className="h-3 w-3" />
+                      <ExternalLink className="h-3 w-3" />
                     </a>
                   ) : (
                     <span>-</span>
@@ -307,9 +302,6 @@ const FundingTable: React.FC<FundingTableProps> = ({
                 <span>{row.date}</span>
               </div>
               <div className="flex items-center gap-1">
-                <span className="text-gray-500 dark:text-gray-400">
-                  Source:
-                </span>
                 {row.source_url ? (
                   <a
                     href={row.source_url}
@@ -317,7 +309,7 @@ const FundingTable: React.FC<FundingTableProps> = ({
                     rel="noopener noreferrer"
                     className="text-orange-500 hover:text-orange-600 inline-flex items-center gap-1"
                   >
-                    Link <ExternalLink className="h-3 w-3" />
+                    <ExternalLink className="h-3 w-3" />
                   </a>
                 ) : (
                   <span>-</span>
