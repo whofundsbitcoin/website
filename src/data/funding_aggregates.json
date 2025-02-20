@@ -17,9 +17,8 @@
   },
   {
     "funder": "HRF",
-    "recipientCount": 174,
-    "amount": "5,500,000 USD",
-    "isIncomplete": true,
+    "recipientCount": 100,
+    "amount": "NA",
     "source_url": "https://hrf.org/devfund",
     "notes": "Bitcoin Development Fund",
     "dateRange": "2020 - Present"
@@ -27,15 +26,15 @@
   {
     "funder": "Bitwise",
     "recipientCount": "Brink, OpenSats, HRF",
-    "amount": "%",
+    "amount": "NA",
     "source_url": "https://bitbetf.com/funding-bitcoin",
     "notes": "10% Bitcoin ETF profits pledge",
     "dateRange": "2024 - Present"
   },
   {
     "funder": "ARK Invest",
-    "recipientCount": "Brink, OpenSats & HRF",
-    "amount": "%",
+    "recipientCount": "Brink, OpenSats, HRF",
+    "amount": "NA",
     "source_url": "https://njump.me/nevent1qqsqn2s0vekw45jxahy3llcg2k3jxf804kkjma45508w6g8gnht2g4cprpmhxue69uhhyetvv9ujumn0wdmksetjv5hxxmmdqyt8wumn8ghj7un9d3shjtnwdaehgu3wvfskueqpz3mhxue69uhhyetvv9ujuerpd46hxtnfdupzqpxfzhdwlm3cx9l6wdzyft8w8y9gy607tqgtyfq7tekaxs7lhmxfspda99",
     "notes": "Fixed % revenue pledge",
     "dateRange": "2024 - Present"
@@ -43,8 +42,7 @@
   {
     "funder": "OKCoin",
     "recipientCount": 10,
-    "amount": "675,000 USD",
-    "isIncomplete": true,
+    "amount": "NA",
     "source_url": "https://developergrant.okcoin.com/",
     "notes": "Open Source Developer Grants",
     "dateRange": "2020 - Present",
@@ -67,7 +65,7 @@
   {
     "funder": "BitMEX",
     "recipientCount": 10,
-    "amount": "1,624,166 USD",
+    "amount": "NA",
     "source_url": "https://blog.bitmex.com/grants/",
     "notes": "Open Source Developer Grant Program",
     "dateRange": "2019 - 2023",
@@ -101,8 +99,7 @@
   {
     "funder": "Superlunar",
     "recipientCount": 13,
-    "amount": "1,225,000 USD",
-    "isIncomplete": true,
+    "amount": "NA",
     "source_url": "https://superlunar.com/fund",
     "notes": "An extension of the Gemini Opportunity Fund",
     "dateRange": "2020 - 2022",

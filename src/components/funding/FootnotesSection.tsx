@@ -7,14 +7,6 @@ const FootnotesSection = () => {
         Notes on Methodology
       </h3>
       <div className="space-y-4 text-sm text-gray-600 dark:text-gray-400">
-        <p id="incomplete-amount" className="scroll-mt-20">
-          <span className="font-medium text-gray-900 dark:text-gray-100">
-            Incomplete Amounts:{" "}
-          </span>
-          {`The "+" symbol indicates that the total amount shown is incomplete,
-          as not all donations from this source has been publicly disclosed or
-          verified. The actual total is likely higher than the amount shown.`}
-        </p>
         <p>
           <span className="font-medium text-gray-900 dark:text-gray-100">
             Inclusion Criteria:{" "}

@@ -17,8 +17,8 @@ Publicly disclosed bitcoin development funding, excluding downstream allocations
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/bitcoin-dev-project/who-funds-bitcoin-development
-cd who-funds-bitcoin-development
+git clone https://github.com/whofundsbitcoin/website
+cd website
 ```
 
 2. Install dependencies:
